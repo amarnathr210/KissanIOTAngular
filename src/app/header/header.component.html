@@ -1,0 +1,28 @@
+<nav class="css-16iof6b">
+  <button
+    class="css-1rgr0uj"
+    (mouseenter)="showdiv($event)"
+    (mouseleave)="hidediv($event)"
+  >
+    <!-- <mat-icon>home</mat-icon>
+    <div style="width: 10px;height: 10px;display: none">test</div> -->
+  </button>
+
+  <div class="css-uinfal"></div>
+  <button
+    class="css-1rgr0uj"
+    *ngIf="isUserLoggedIn"
+    [matMenuTriggerFor]="belowMenu"
+  >
+    <mat-icon class="css-aotnu7" matTooltip="{{ user.name }}"
+      >power_settings_new</mat-icon
+    >
+    <mat-menu FocusOrigin="program" #belowMenu="matMenu" yPosition="below">
+      <!-- <mat-icon>account_settings_new</mat-icon> -->
+      <button mat-menu-item>{{ user.name }}</button>
+      <button mat-menu-item (click)="logout()">LogOut</button>
+    </mat-menu>
+  </button>
+
+  <div spacing="0 2px" class="css-5muh3l"></div>
+</nav>

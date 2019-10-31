@@ -1,0 +1,37 @@
+<app-header [isUserLoggedIn]="isUserLoggedIn"></app-header>
+<div class="container">
+  <div class="row col-sm-offset-0">
+    <div>
+      <div><h2>Locations</h2></div>
+      <div style="width: 100%">
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let device of devicetoken">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ device.LocationName.toUpperCase() }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-slide-toggle
+              *ngFor="let deviceinfo of device.name"
+              checked="{{ deviceinfo.SensorStatus == 1 ? true : false }}"
+              (change)="onChangeDeviceStatus(deviceinfo, $event)"
+              disableRipple="true"
+              labelPosition="before"
+              disableDragValue="true"
+              >{{
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                  deviceinfo.DeviceName
+              }}
+            </mat-slide-toggle>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+      <div style="width: 100%">
+        <button mat-button>
+          <mat-icon></mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<app-header [isUserLoggedIn]="isUserLoggedIn"></app-header>
+<div class="container">
+  <div class="row col-sm-offset-0">
+    <div>location</div>
+  </div>
+
+  <h4>mat-select</h4>
+  <mat-form-field>
+    <mat-label>location</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="location">
+      <mat-option *ngFor="let food of locations" [value]="location.value">
+        {{ food.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>DeviceNamae</mat-label>
+    <input
+      type="text"
+      matInput
+      placeholder="DeviceNamae"
+      [(ngModel)]="model.DeviceNamae"
+      #username="ngModel"
+      name="DeviceNamae"
+      required
+    />
+  </mat-form-field>
+</div>

@@ -1,0 +1,42 @@
+.css-16iof6b {
+  z-index: 100;
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+  flex-shrink: 0;
+  background-color: white;
+  user-select: none;
+  color: black;
+}
+.css-uinfal {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  margin: 0px;
+}
+.css-rcn8ck {
+  flex-shrink: 0;
+  display: inline-flex;
+  margin: auto 0px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.css-1rgr0uj {
+  display: flex;
+  line-height: inherit;
+  color: black;
+  font-weight: 400;
+  font-size: 13px;
+  width: 60px;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  padding-left: 15px;
+  margin-right: 7px;
+  transition: all 0.1s ease 0s;
+  overflow: hidden;
+  background-color: white;
+  border: 0px;
+}
+.css-1rgr0uj:focus {
+  border: 0px;
+}

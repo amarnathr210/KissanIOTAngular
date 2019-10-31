@@ -1,0 +1,12 @@
+.logincenter {
+  width: 20%;
+  margin: auto;
+  background-color: lightgreen;
+  /* margin-top: 50px; */
+  padding: 2%;
+  border-radius: 4%;
+}
+.mat-button {
+  background-color: green;
+  color: white;
+}
