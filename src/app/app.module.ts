@@ -12,13 +12,23 @@ import { HomeComponent } from "./home/home.component";
 import { AuthGuard } from "./_guards/auth.guard";
 import { AuthenticationService, UserService } from "./_services/index";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { RegistrationComponent } from './registration/registration.component';
-import { DeviceComponent } from './device/device.component';
-import { LocationComponent } from './location/location.component';
-import { HeaderComponent } from './header/header.component';
+import { RegistrationComponent } from "./registration/registration.component";
+import { DeviceComponent } from "./device/device.component";
+import { LocationComponent } from "./location/location.component";
+import { HeaderComponent } from "./header/header.component";
+import { LayoutModule } from "angular-admin-lte";
+import { adminLteConf } from "./admin-lte.conf";
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, RegistrationComponent, DeviceComponent, LocationComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    RegistrationComponent,
+    DeviceComponent,
+    LocationComponent,
+    HeaderComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,7 +36,8 @@ import { HeaderComponent } from './header/header.component';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    material
+    material,
+    LayoutModule.forRoot(adminLteConf)
   ],
   providers: [
     AuthGuard,
