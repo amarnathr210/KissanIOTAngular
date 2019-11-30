@@ -3,6 +3,7 @@ import { NgForm, FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Router, ActivatedRoute } from "@angular/router";
 import { AuthenticationService } from "../_services";
 import { error } from "@angular/compiler/src/util";
+import { ConstantsService } from "./../_services/constants.service";
 
 export interface userInfo {
   username: string;
@@ -21,6 +22,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private authenticationService: AuthenticationService,
     private route: ActivatedRoute,
+    private constantsService: ConstantsService,
     private router: Router
   ) {}
 
@@ -36,6 +38,7 @@ export class LoginComponent implements OnInit {
       .login(this.model.username, this.model.password)
       .subscribe(
         data => {
+          this.constantsService.isUserLoggedIn = true;
           this.router.navigate([this.returnUrl]);
         },
         error => {

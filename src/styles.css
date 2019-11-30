@@ -1,18 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~material-design-icons/iconfont/material-icons.css";
+/* @import "~material-design-icons/iconfont/material-icons.css"; */
 
-html,
+/* html,
 body {
   height: 100%;
   min-height: 100%;
   margin: 0;
-  padding: 0;
-  /* background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("assets/img/image_1.png") repeat; */
+  padding: 0;  
   background: url("assets/img/image_1.png") no-repeat;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,7 +58,7 @@ button:hover:focus {
 .fixed-button {
   position: fixed;
   top: 0px;
-  /* left: 0px; */
+  
   border: none;
   background-color: white;
   height: inherit;
@@ -73,4 +68,4 @@ button:hover:focus {
 
 .fixed-button:visited:focus-within:active:focus:visited {
   border: none;
-}
+} */

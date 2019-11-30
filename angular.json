@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "library",
   "projects": {
     "AngularSample1": {
       "root": "",
@@ -40,15 +40,21 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "./node_modules/bootstrap-css-only/css/bootstrap.min.css",
+              "./node_modules/font-awesome/css/font-awesome.css",
+              "./node_modules/ionicons/dist/css/ionicons.css",
+              "./node_modules/prismjs/themes/prism-tomorrow.css",
+              "./node_modules/admin-lte-css/dist/css/AdminLTE.css",
+              "./node_modules/admin-lte-css/dist/css/skins/_all-skins.css",
               "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-typescript.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -107,22 +113,14 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ]
+            "assets": ["src/favicon.ico", "src/assets"]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }
@@ -148,9 +146,45 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "angular-admin-lte": {
+      "root": "library/angular-admin-lte",
+      "sourceRoot": "library/angular-admin-lte/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "library/angular-admin-lte/tsconfig.lib.json",
+            "project": "library/angular-admin-lte/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "library/angular-admin-lte/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "library/angular-admin-lte/src/test.ts",
+            "tsConfig": "library/angular-admin-lte/tsconfig.spec.json",
+            "karmaConfig": "library/angular-admin-lte/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "library/angular-admin-lte/tsconfig.lib.json",
+              "library/angular-admin-lte/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
           }
         }
       }

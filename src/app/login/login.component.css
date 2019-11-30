@@ -1,12 +1,24 @@
-.logincenter {
+/* .logincenter {
   width: 20%;
   margin: auto;
   background-color: lightgreen;
-  /* margin-top: 50px; */
+  
   padding: 2%;
   border-radius: 4%;
 }
 .mat-button {
   background-color: green;
   color: white;
+} */
+.login-page {
+  height: 100% !important;
+  min-height: 100% !important;
+  background: url("/assets/img/image_1.png") no-repeat !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background: rgba(0, 0, 0, 0.6);
+}
+.login-box {
+  margin-top: 0px !important;
 }
