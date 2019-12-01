@@ -12,7 +12,7 @@ export const adminLteConf = {
     // { label: "MAIN NAVIGATION", separator: true },
     {
       label: "Home",
-      route: "",
+      route: "/",
       iconClasses: "fa home"
       // pullRights: [{ text: "New", classes: "label pull-right bg-green" }]
     },
