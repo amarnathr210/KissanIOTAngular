@@ -6,7 +6,7 @@ import {
   BoxModule,
   TabsModule,
   DropdownModule
-} from "../../../library/angular-admin-lte/src";
+} from "../AdminLte/library/angular-admin-lte/src";
 
 import { HeaderInnerComponent } from "./header-inner/header-inner.component";
 import { SidebarLeftInnerComponent } from "./sidebar-left-inner/sidebar-left-inner.component";

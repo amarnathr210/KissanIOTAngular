@@ -16,7 +16,7 @@ import { RegistrationComponent } from "./registration/registration.component";
 import { DeviceComponent } from "./device/device.component";
 import { LocationComponent } from "./location/location.component";
 import { HeaderComponent } from "./header/header.component";
-import { LayoutModule } from "../../library/angular-admin-lte/src";
+import { LayoutModule } from "./AdminLte/library/angular-admin-lte/src";
 import { adminLteConf } from "./admin-lte.conf";
 import { CoreModule } from "./core/core.module";
 import { LoadingPageModule, MaterialBarModule } from "angular-loading-page";

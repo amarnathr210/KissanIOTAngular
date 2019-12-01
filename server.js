@@ -6,6 +6,7 @@ const path = require("path");
 // Run the app by serving the static files
 // in the dist directory
 app.use(express.static(__dirname + "/dist/AngularSample1"));
+// console.log(__dirname + "/library/angular-admin-lte");
 // Start the app by listening on the default
 // Heroku port
 app.listen(process.env.PORT || 8080);

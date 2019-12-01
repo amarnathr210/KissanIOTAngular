@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnDestroy, OnInit } from "@angular/core";
 
 import { Subscriber } from "rxjs";
 
-import { LayoutStore } from "../../../../library/angular-admin-lte/src";
+import { LayoutStore } from "../../AdminLte/library/angular-admin-lte/src";
 
 @Component({
   selector: "app-sidebar-right-inner",
