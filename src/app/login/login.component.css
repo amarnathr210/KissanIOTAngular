@@ -19,6 +19,35 @@
   background-size: cover !important;
   background: rgba(0, 0, 0, 0.6);
 }
+
 .login-box {
   margin-top: 0px !important;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+}
+
+@media screen and (max-width: 768px) {
+  .login-box {
+    left: 5%;
+  }
+}
+
+.btn.btn-flat {
+  border-radius: 10px;
+  float: right;
+  margin-left: 20px;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.login-box-body {
+  border-radius: 5px;
+}
+
+a {
+  color: #0ee6b4;
 }
