@@ -1,5 +1,5 @@
 export const adminLteConf = {
-  skin: "blue",
+  skin: "green",
   // isSidebarLeftCollapsed: false,
   // isSidebarLeftExpandOnOver: false,
   // isSidebarLeftMouseOver: false,
@@ -13,6 +13,12 @@ export const adminLteConf = {
     {
       label: "Home",
       route: "/",
+      iconClasses: "fa home"
+      // pullRights: [{ text: "New", classes: "label pull-right bg-green" }]
+    },
+    {
+      label: "Admin",
+      route: "/admin",
       iconClasses: "fa home"
       // pullRights: [{ text: "New", classes: "label pull-right bg-green" }]
     },
