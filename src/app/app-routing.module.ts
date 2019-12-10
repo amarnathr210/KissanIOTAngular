@@ -36,7 +36,8 @@ const routes: Routes = [
       customLayout: true
     }
   },
-  { path: "device", component: DeviceComponent, canActivate: [AuthGuard] }
+  { path: "device", component: DeviceComponent, canActivate: [AuthGuard] },
+  { path: "location", component: LocationComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

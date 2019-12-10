@@ -22,4 +22,17 @@
       required
     />
   </mat-form-field> -->
+
+  <mat-form-field>
+    <mat-label>Locations</mat-label>
+    <mat-select>
+      <mat-option>select</mat-option>
+      <mat-option
+        *ngFor="let device of devicetoken"
+        [value]="device.LocationName"
+      >
+        {{ device.LocationName }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 </div>

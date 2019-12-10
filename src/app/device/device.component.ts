@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { AuthenticationService } from "../_services";
-import { User } from "../_models";
+import { AuthenticationService, DeviceService } from "../_services";
+import { User, Deviceinfo } from "../_models";
 
 @Component({
   selector: "app-device",
@@ -10,12 +10,19 @@ import { User } from "../_models";
 export class DeviceComponent {
   public user: User;
   public isUserLoggedIn: boolean;
-  constructor(public authenticationService: AuthenticationService) {}
+  public devicetoken: Deviceinfo[];
+  constructor(
+    public authenticationService: AuthenticationService,
+    public deviceService: DeviceService
+  ) {}
 
   ngOnInit() {
     this.user = this.authenticationService.currentUserValue;
     if (this.user) {
       this.isUserLoggedIn = true;
     }
+    this.deviceService.getDeviceInfobyUserID(this.user).subscribe(data => {
+      this.devicetoken = data;
+    });
   }
 }

@@ -22,7 +22,8 @@ export const adminLteConf = {
       iconClasses: "fa home"
       // pullRights: [{ text: "New", classes: "label pull-right bg-green" }]
     },
-    { label: "Add Device", route: "device", iconClasses: "fa fa-tasks" }
+    { label: "Add Device", route: "device", iconClasses: "fa fa-tasks" },
+    { label: "Add Locations", route: "location", iconClasses: "fa fa-tasks" }
     // {
     //   label: "Layout",
     //   iconClasses: "fa fa-th-list",
