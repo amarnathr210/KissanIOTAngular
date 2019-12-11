@@ -4,3 +4,11 @@
 .navbar {
   padding: 0;
 }
+.navbar-static-top {
+  line-height: 0px !important;
+}
+.hidden-xs {
+  line-height: 1.5 !important;
+} /* body {
+  line-height: 0px;
+} */
