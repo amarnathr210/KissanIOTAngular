@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   envName: "dev",
-  apiUrl: "http://localhost:8081/api"
-  // apiUrl: "https://kissaniot.herokuapp.com/api"
+  // apiUrl: "http://localhost:8081/api"
+  apiUrl: "https://kissaniot.herokuapp.com/api"
 };
 
 /*
