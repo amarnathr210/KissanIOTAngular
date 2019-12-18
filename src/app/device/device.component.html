@@ -1,17 +1,38 @@
 <!-- <app-header [isUserLoggedIn]="isUserLoggedIn"></app-header> -->
 <div class="container">
-  <div class="row col-sm-offset-0">Add Device</div>
+  <!-- <div class="row col-sm-offset-0">Add Device</div> -->
 
-  <mat-form-field>
-    <mat-label>Locations</mat-label>
-    <mat-select>
-      <mat-option>select</mat-option>
-      <mat-option
-        *ngFor="let device of devicetoken"
-        [value]="device.LocationName"
-      >
-        {{ device.LocationName }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+  <!-- <mk-dropdown toggleText="Basic Toggle" buttonBackgroudColor="success">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </mk-dropdown> -->
+  <!-- <select>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+  </select> -->
+
+  <mk-box
+    header="Add Devices"
+    [isCollapsable]="true"
+    [isRemovable]="false"
+    contentClasses="table-responsive"
+  >
+    <mat-form-field>
+      <mat-label>Locations</mat-label>
+      <mat-select>
+        <mat-option>select</mat-option>
+        <mat-option
+          *ngFor="let device of devicetoken"
+          [value]="device.LocationName"
+        >
+          {{ device.LocationName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mk-box>
 </div>

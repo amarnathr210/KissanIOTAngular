@@ -19,7 +19,8 @@ export class DeviceService {
     );
   }
   updateSensorStatus(deviceinfo: any) {
-    return this.http.post<Deviceinfo[]>(
+    debugger;
+    return this.http.post<Deviceinfo>(
       `${environment.apiUrl}/device/updatedevicestatus`,
       deviceinfo
     );

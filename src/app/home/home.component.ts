@@ -11,6 +11,7 @@ import { AppComponent } from "../app.component";
 export class HomeComponent implements OnInit {
   public user: User;
   public devicetoken: Deviceinfo[];
+  public objdeviceInfo: Deviceinfo;
   public app: AppComponent;
   public isUserLoggedIn: boolean;
   constructor(
@@ -38,8 +39,8 @@ export class HomeComponent implements OnInit {
       deviceinfoinput.SensorStatus = e.checked;
     }
 
-    this.deviceService
-      .updateSensorStatus(deviceinfoinput)
-      .subscribe(data => (this.devicetoken = data));
+    this.deviceService.updateSensorStatus(deviceinfoinput).subscribe(data => {
+      this.objdeviceInfo = data;
+    });
   }
 }

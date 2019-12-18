@@ -4,6 +4,7 @@ import { environment } from "../environments/environment";
 import { AuthenticationService, DeviceService } from "./_services";
 import { Deviceinfo, DeviceBaseLine, User } from "./_models";
 import { ConstantsService } from "./_services/constants.service";
+// import { LayoutService } from "angular-admin-lte";
 
 @Component({
   selector: "app-root",
@@ -13,13 +14,18 @@ import { ConstantsService } from "./_services/constants.service";
 export class AppComponent {
   public user: User;
   public isUserLoggedIn: boolean;
+  public customLayout: boolean;
 
   constructor(
     public authenticationService: AuthenticationService,
-    public constantsService: ConstantsService
+    public constantsService: ConstantsService // private layoutService: LayoutService
   ) {}
 
   ngOnInit() {
+    // this.layoutService.isCustomLayout.subscribe((value: boolean) => {
+    //   this.customLayout = value;
+    // });
+
     this.user = this.authenticationService.currentUserValue;
     if (this.user) {
       this.isUserLoggedIn = true;
