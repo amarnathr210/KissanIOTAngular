@@ -50,7 +50,7 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "material-design-icons": "^3.0.1",
-    "ng-packagr": "^5.7.1",
+    "ng-packagr": "^10.1.1",
     "prismjs": "^1.17.1",
     "protractor": "~5.4.0",
     "rxjs": "^6.5.3",
